@@ -7,6 +7,7 @@ stops.append("Edinburgh Waverley")
 stops.insert(0, "Glasgow Queen Street")
 
 #3. Add "Polmont" at the appropriate point (between "Falkirk High" and "Linlithgow")
+# operating on assumption that the list should remain adjusted in this case
 stops.insert(4, "Polmont")
 
 #4. Print out the index position of "Linlithgow"
