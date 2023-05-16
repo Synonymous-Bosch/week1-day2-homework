@@ -10,14 +10,14 @@ for i in numbers:
 
 print(even_numbers)
 
+
 # 2. Print the difference between the largest and smallest value:
-# numbers.sort()
-# diff_first_last = numbers[-1] - numbers[0]
-# print(diff_first_last)
+sorted_list = sorted(numbers)
+diff_first_last = sorted_list[-1] - sorted_list[0]
+print(diff_first_last)
 
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
 last_number = 0
-print(numbers)
 for i in numbers:
     if i == last_number and i == 2:
         print(True)
@@ -28,7 +28,6 @@ for i in numbers:
 #    BUT ignore any section of numbers starting with a 6 and extending to the next 7.
 #    
 #    So [11, 6, 4, 99, 7, 11] would have sum of 22
-print(numbers)
 sum = 0
 can_count = True
 for i in numbers:
@@ -51,7 +50,6 @@ print(sum)
 #
 #    So [5, 13, 2] would have sum of 5. 
 
-print(numbers)
 sum = 0
 position = 0
 for i in numbers:
@@ -64,7 +62,7 @@ for i in numbers:
         position = position + 1
     else:
         position = position + 1
-        print(position)
+
 
 print(sum)
     

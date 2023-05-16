@@ -67,26 +67,22 @@ print(users["Erik"]["lottery_numbers"])
 print(users["Avril"]["pets"][0]["species"])
 
 # 5. Get the smallest of Erik's lottery numbers
-Erik_lottery = users["Erik"]["lottery_numbers"]
-Erik_lottery.sort()
+Erik_lottery = sorted(users["Erik"]["lottery_numbers"])
 smallest_number = Erik_lottery[0]
 print(smallest_number)
 
 # 6. Return an list of Avril's lottery numbers that are even
 
 Avril_lottery = users["Avril"]["lottery_numbers"]
-uneven_numbers = []
+even_numbers = []
 for i in Avril_lottery:
-    if int(i) % 2 != 0:
-        uneven_numbers.append(i)
+    if int(i) % 2 == 0:
+        even_numbers.append(i)
 
-for j in uneven_numbers:
-    Avril_lottery.remove(j)
-print(Avril_lottery)
+print(even_numbers)
 
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 users["Erik"]["lottery_numbers"].append(7)
-print(users["Erik"]["lottery_numbers"])
 
 # 8. Change Erik's hometown to Edinburgh
 users["Erik"]["home_town"] = "Edinburgh"
@@ -105,4 +101,3 @@ users["Montgomery"] =  {
          "species" : "dog"}
     ]
 }
-
