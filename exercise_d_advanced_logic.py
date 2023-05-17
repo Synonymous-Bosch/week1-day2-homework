@@ -12,16 +12,20 @@ print(even_numbers)
 
 
 # 2. Print the difference between the largest and smallest value:
-sorted_list = sorted(numbers)
-diff_first_last = sorted_list[-1] - sorted_list[0]
-print(diff_first_last)
+# sorted_list = sorted(numbers)
+# diff_first_last = sorted_list[-1] - sorted_list[0]
+# print(diff_first_last)
+print(max(numbers) - min(numbers))
 
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
-last_number = 0
-for i in numbers:
-    if i == last_number and i == 2:
+# last_number = 0
+# for i in numbers:
+#     if i == last_number and i == 2:
+#         print(True)
+#     last_number = i
+for count, num in enumerate(numbers):
+    if num == 2 and numbers[count+1] == 2:
         print(True)
-    last_number = i
     
 
 # 4. Print the sum of the numbers, 
