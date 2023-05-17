@@ -32,16 +32,26 @@ for count, num in enumerate(numbers):
 #    BUT ignore any section of numbers starting with a 6 and extending to the next 7.
 #    
 #    So [11, 6, 4, 99, 7, 11] would have sum of 22
-sum = 0
-can_count = True
-for i in numbers:
-    if i == 6:
-        can_count = False
-    if i != 6 and can_count == True:
-        sum = sum + i
-    if i == 7:
-        can_count = True
 
+sum = 0
+
+# can_count = True
+# for i in numbers:
+#     if i == 6:
+#         can_count = False
+#     if i != 6 and can_count == True:
+#         sum = sum + i
+#     if i == 7:
+#         can_count = True
+
+ignore = False
+for num in numbers:
+    if num == 6:
+        ignore = True
+    if num != 6 and ignore == False:
+        sum += num
+    if num == 7:
+        ignore = False
 
 
 print(sum)
@@ -56,17 +66,22 @@ print(sum)
 #    So [5, 13, 2] would have sum of 5. 
 
 sum = 0
-position = 0
-for i in numbers:
-    if position == 0:
-        if i != 13:
-            sum = sum + i
-        position = position + 1
-    elif i != 13 and numbers[position-1] != 13:
-        sum = sum + i
-        position = position + 1
-    else:
-        position = position + 1
+# position = 0
+# for i in numbers:
+#     if position == 0:
+#         if i != 13:
+#             sum = sum + i
+#         position = position + 1
+#     elif i != 13 and numbers[position-1] != 13:
+#         sum = sum + i
+#         position = position + 1
+#     else:
+#         position = position + 1
+
+ignore = False
+for pos, num in enumerate(numbers):
+    if num != 13 and numbers[pos-1] != 13:
+        sum += num
 
 
 print(sum)
