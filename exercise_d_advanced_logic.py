@@ -33,10 +33,11 @@ can_count = True
 for i in numbers:
     if i == 6:
         can_count = False
-    elif i == 7:
-        can_count = True
-    elif i != 6 and can_count == True:
+    if i != 6 and can_count == True:
         sum = sum + i
+    if i == 7:
+        can_count = True
+
 
 
 print(sum)
