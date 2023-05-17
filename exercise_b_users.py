@@ -67,19 +67,22 @@ print(users["Erik"]["lottery_numbers"])
 print(users["Avril"]["pets"][0]["species"])
 
 # 5. Get the smallest of Erik's lottery numbers
-Erik_lottery = sorted(users["Erik"]["lottery_numbers"])
-smallest_number = Erik_lottery[0]
-print(smallest_number)
+# Erik_lottery = sorted(users["Erik"]["lottery_numbers"])
+# smallest_number = Erik_lottery[0]
+# print(smallest_number)
+print(min(users["Erik"]["lottery_numbers"]))
 
 # 6. Return an list of Avril's lottery numbers that are even
 
-Avril_lottery = users["Avril"]["lottery_numbers"]
-even_numbers = []
-for i in Avril_lottery:
-    if int(i) % 2 == 0:
-        even_numbers.append(i)
+avril_lottery = users["Avril"]["lottery_numbers"]
+# even_numbers = []
+# for i in Avril_lottery:
+#     if int(i) % 2 == 0:
+#         even_numbers.append(i)
 
-print(even_numbers)
+# print(even_numbers)
+
+print([num for num in avril_lottery if num % 2 == 0])
 
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 users["Erik"]["lottery_numbers"].append(7)
